@@ -93,7 +93,7 @@ router.post('/admin/login', async (req, res) => {
 
 // Admin Stats
 router.get('/admin/stats', async (req, res) => {
-  // if (!req.session.isAdmin) return res.status(403).json({ message: 'Unauthorized' });
+  if (!req.session.isAdmin) return res.status(403).json({ message: 'Unauthorized' });
 
   try {
     const poll = await Poll.findOne({ status: 'active' });

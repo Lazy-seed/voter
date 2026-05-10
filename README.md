@@ -27,15 +27,15 @@ A real-time polling application built with the MERN stack (MongoDB, Express, Rea
    ```bash
    docker-compose up --build -d
    ```
-   *This will start MongoDB, the Backend server on port 5000, and the Frontend Nginx server on port 80.*
+   *This will start MongoDB, the Backend server on port 8000, and the Frontend Nginx server on port 3000.*
 3. **Seed the Database**:
    ```bash
    docker exec -it live-polling-backend npm run seed
    ```
    *This populates the Admin user, the Poll, 5 Nominees, and some sample votes.*
 4. **Access the Application**:
-   - **Audience Voting Page**: `http://localhost`
-   - **Admin Dashboard**: `http://localhost/admin`
+   - **Audience Voting Page**: `http://localhost:3000`
+   - **Admin Dashboard**: `http://localhost:3000/admin`
      - **Login Credentials**: 
        - Username: `admin`
        - Password: `password123`
@@ -48,7 +48,7 @@ A real-time polling application built with the MERN stack (MongoDB, Express, Rea
    cd backend
    npm install
    npm run seed  # Seed the database
-   npm run dev   # Starts server on port 5000
+   npm run dev   # Starts server on port 8000
    ```
 3. **Frontend**:
    ```bash
