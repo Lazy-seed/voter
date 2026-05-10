@@ -59,5 +59,7 @@ A real-time polling application built with the MERN stack (MongoDB, Express, Rea
 4. Access the app at `http://localhost:5173`.
 
 ## Architecture Details
+- **MVC Pattern**: The backend strictly follows the Route-Controller architecture to separate URL routing logic from business logic, ensuring code is scalable, modular, and maintainable.
+- **Environment Variables**: `.env.example` files are provided in both `frontend` and `backend` directories to demonstrate 12-factor app principles and secure secret management.
 - **One Vote Per Session**: The backend tracks voting using `express-session`. A cookie is stored in the voter's browser. Once a vote is cast, the session ID is recorded in the `Vote` collection, preventing duplicates.
 - **WebSockets**: `Socket.io` is used instead of Webhooks to ensure efficient, bidirectional, and instant communication to the Admin Dashboard whenever a new vote is added.
